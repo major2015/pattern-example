@@ -1,21 +1,25 @@
 package com.iblog.pattern.factory;
 
 public class CarFactory {
+    private CarFactory() {
+        //Prevent instantiation
+    }
+
     public static Car buildCar(CarType model) {
         Car car = null;
-        switch (model) {
-            case SMALL:
-                car = new SmallCar();
-                break;
+        Location location = Location.USA; //Read location property somewhere from configuration
 
-            case SEDAN:
-                car = new SedanCar();
+        //Use location specific car factory
+        switch (location) {
+            case USA:
+                car = USACarFactory.buildCar(model);
                 break;
-
-            case LUXURY:
-                car = new LuxuryCar();
+            case ASIA:
+                car = AsiaCarFactory.buildCar(model);
                 break;
-
+            case DEFAULT:
+                car = DefaultCarFactory.buildCar(model);
+                break;
             default:
                 // throw some exception
                 break;

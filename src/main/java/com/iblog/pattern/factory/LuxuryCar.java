@@ -2,8 +2,8 @@ package com.iblog.pattern.factory;
 
 public class LuxuryCar extends Car {
 
-    LuxuryCar() {
-        super(CarType.LUXURY);
+    LuxuryCar(Location location) {
+        super(CarType.LUXURY, location);
         construct();
     }
 

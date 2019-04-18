@@ -2,8 +2,8 @@ package com.iblog.pattern.factory;
 
 public class SmallCar extends Car {
 
-    SmallCar() {
-        super(CarType.SMALL);
+    SmallCar(Location location) {
+        super(CarType.SMALL, location);
         construct();
     }
 

@@ -7,7 +7,8 @@ public class CarFactory {
 
     public static Car buildCar(CarType model) {
         Car car = null;
-        Location location = Location.USA; //Read location property somewhere from configuration
+        //Read location property somewhere from configuration, also as a param.
+        Location location = Location.USA;
 
         //Use location specific car factory
         switch (location) {

@@ -1,22 +1,22 @@
 package com.iblog.pattern.responsibilityChain;
 
+/**
+ * Wrapper the builder of service and solution in this class.
+ */
 public class ServiceExchange {
-    private Service service;
-    private Solution solution;
+    private final Service service;
+    private final Solution.Builder solution;
+
+    public ServiceExchange(Service service, Solution.Builder solution) {
+        this.service = service;
+        this.solution = solution;
+    }
 
     public Service getService() {
         return service;
     }
 
-    public void setService(Service service) {
-        this.service = service;
-    }
-
-    public Solution getSolution() {
+    public Solution.Builder getSolution() {
         return solution;
-    }
-
-    public void setSolution(Solution solution) {
-        this.solution = solution;
     }
 }

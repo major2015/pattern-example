@@ -1,6 +1,6 @@
 package com.iblog.pattern.responsibilityChain;
 
-public enum ServiceCategory {
+public enum Category {
     PRE_SALES_PRODUCT_CONSULTATION,
     PROMOTIONS,
     COMMODITY_SUPPLY_CHAIN,

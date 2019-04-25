@@ -1,7 +1,7 @@
 package com.iblog.pattern.responsibilityChain;
 
 public class Service {
-    private final ServiceCategory category;
+    private final Category category;
     private final String id;
     private final String description;
 
@@ -12,7 +12,7 @@ public class Service {
     }
 
     public static class Builder {
-        public final ServiceCategory category;
+        public final Category category;
         public String id;
         public String description;
 
@@ -20,7 +20,7 @@ public class Service {
             return new Service(this);
         }
 
-        public Builder(ServiceCategory category) {
+        public Builder(Category category) {
             this.category = category;
         }
 
@@ -36,7 +36,7 @@ public class Service {
     }
 
 
-    public ServiceCategory getCategory() {
+    public Category getCategory() {
         return category;
     }
 

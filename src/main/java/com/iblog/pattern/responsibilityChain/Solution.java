@@ -4,17 +4,20 @@ public class Solution {
     private final String id;
     private final String serviceId;
     private final boolean solved;
+    private final String solvedBy;
 
     private Solution(Builder builder) {
         this.id = builder.id;
         this.serviceId = builder.serviceId;
         this.solved = builder.solved;
+        this.solvedBy = builder.solvedBy;
     }
 
     public static class Builder {
         public String id;
         public final String serviceId;
         public boolean solved;
+        public String solvedBy;
 
         public Solution build() {
             return new Solution(this);
@@ -33,6 +36,11 @@ public class Solution {
             this.solved = solved;
             return this;
         }
+
+        public Builder setSulvedBy(String solvedBy) {
+            this.solvedBy = solvedBy;
+            return this;
+        }
     }
 
     public String getId() {
@@ -45,5 +53,9 @@ public class Solution {
 
     public boolean isSolved() {
         return solved;
+    }
+
+    public String getSolvedBy() {
+        return solvedBy;
     }
 }

@@ -23,7 +23,7 @@ public class OrderUpdateManager {
         }
     }
 
-    public void awaitpaidOrder(Order order) {
+    public void awaitPaidOrder(Order order) {
         notifier.notify(order, Order.Status.AWAIT_PAYMENT, "paid order");
     }
 
